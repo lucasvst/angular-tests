@@ -6,42 +6,42 @@ describe('Users factory', function() {
             {id: 2, name: 'John', role: 'Architect', location: 'Madrid', twitter: 'johndoe', pokemon: { name: 'charmander' }},
             {id: 3, name: 'Jack', role: 'Doctor', location: 'China', twitter: 'drjack', pokemon: { name: 'killbill' }}
         ],
-		singleUser = {id: 2, name: 'John', role: 'Architect', location: 'Madrid', twitter: 'johndoe'}
-	;
+        singleUser = {id: 2, name: 'John', role: 'Architect', location: 'Madrid', twitter: 'johndoe', pokemon: { name: 'charmander' }}
+    ;
 
-	beforeEach(angular.mock.module('api.users'));
+    beforeEach(angular.mock.module('api.users'));
 
-	beforeEach(inject(function(_Users_) {
-		Users = _Users_;
-	}));
+    beforeEach(inject(function(_Users_) {
+        Users = _Users_;
+    }));
 
-	it('should exist', function() {
-		expect(Users).toBeDefined();
-	});
+    it('should exist', function() {
+        expect(Users).toBeDefined();
+    });
 
-	describe('.all()', function() {
+    describe('.all()', function() {
 
-		it('should exist', function() {
-			expect(Users.all).toBeDefined();
-		});
+        it('should exist', function() {
+            expect(Users.all).toBeDefined();
+        });
 
-		it('should return a hard-coded list of users', function() {
-			expect(Users.all()).toEqual(userList);
-		})
-	});
+        it('should return a hard-coded list of users', function() {
+            expect(Users.all()).toEqual(userList);
+        })
+    });
 
-	describe('.findById()', function() {
+    describe('.findById()', function() {
 
-		it('should exist', function() {
-			expect(Users.findById).toBeDefined();
-		});
+        it('should exist', function() {
+            expect(Users.findById).toBeDefined();
+        });
 
-		it('should return an user with certain ID, if exists', function() {
-			expect(Users.findById(2)).toBeDefined(singleUser);
-		});
+        it('should return an user with certain ID, if exists', function() {
+            expect(Users.findById(2)).toBeDefined(singleUser);
+        });
 
-		it('should return undefined if the user cannot be found', function() {
-			expect(Users.findById('ABC')).not.toBeDefined();
-		});
-	});
+        it('should return undefined if the user cannot be found', function() {
+            expect(Users.findById('ABC')).not.toBeDefined();
+        });
+    });
 });
