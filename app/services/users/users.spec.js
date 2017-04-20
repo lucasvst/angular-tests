@@ -2,28 +2,10 @@ describe('Users factory', function() {
 
 	var Users,
 		userList = [
-			{
-				id: 1,
-				name: 'Lucas',
-				role: 'Programmer',
-				location: 'Joinville',
-				twitter: 'lucasvst'
-			},
-			{
-				id: 2,
-				name: 'John',
-				role: 'Architect',
-				location: 'Madrid',
-				twitter: 'johndoe'
-			}
-		],
-		singleUser = {
-			id: 2,
-			name: 'John',
-			role: 'Architect',
-			location: 'Madrid',
-			twitter: 'johndoe'
-		}
+            {id: 1, name: 'Lucas', role: 'Programmer', location: 'Joinville', twitter: 'lucasvst'},
+            {id: 2, name: 'John', role: 'Architect', location: 'Madrid', twitter: 'johndoe'}
+        ],
+		singleUser = {id: 2, name: 'John', role: 'Architect', location: 'Madrid', twitter: 'johndoe'}
 	;
 
 	beforeEach(angular.mock.module('api.users'));
