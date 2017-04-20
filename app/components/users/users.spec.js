@@ -3,8 +3,9 @@ describe('UsersController', function() {
     var $controller, UsersController, UsersFactory;
 
     var userList = [
-        {id: 1, name: 'Lucas', role: 'Programmer', location: 'Joinville', twitter: 'lucasvst'},
-        {id: 2, name: 'John', role: 'Architect', location: 'Madrid', twitter: 'johndoe'}
+        {id: 1, name: 'Lucas', role: 'Programmer', location: 'Joinville', twitter: 'lucasvst', pokemon: { name: 'pikachu' }},
+        {id: 2, name: 'John', role: 'Architect', location: 'Madrid', twitter: 'johndoe', pokemon: { name: 'charmander' }},
+        {id: 3, name: 'Jack', role: 'Doctor', location: 'China', twitter: 'drjack', pokemon: { name: 'killbill' }}
     ];
 
     beforeEach(angular.mock.module('ui.router'));

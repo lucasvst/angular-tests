@@ -1,9 +1,10 @@
 describe('Users factory', function() {
 
-	var Users,
-		userList = [
-            {id: 1, name: 'Lucas', role: 'Programmer', location: 'Joinville', twitter: 'lucasvst'},
-            {id: 2, name: 'John', role: 'Architect', location: 'Madrid', twitter: 'johndoe'}
+    var Users,
+        userList = [
+            {id: 1, name: 'Lucas', role: 'Programmer', location: 'Joinville', twitter: 'lucasvst', pokemon: { name: 'pikachu' }},
+            {id: 2, name: 'John', role: 'Architect', location: 'Madrid', twitter: 'johndoe', pokemon: { name: 'charmander' }},
+            {id: 3, name: 'Jack', role: 'Doctor', location: 'China', twitter: 'drjack', pokemon: { name: 'killbill' }}
         ],
 		singleUser = {id: 2, name: 'John', role: 'Architect', location: 'Madrid', twitter: 'johndoe'}
 	;
