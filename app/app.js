@@ -1,10 +1,12 @@
 (function() {
-	'use strict';
+    'use strict';
 
-	angular.module('pocAngular', [
-		'ui.router'
-		])
-	.config(function($urlRouterProvider) {
-		$urlRouterProvider.otherwise("/");
-	});
+    angular.module('angularTests', [
+        'ui.router',
+        'api.users',
+        'components.users'
+    ])
+    .config(function($urlRouterProvider) {
+        $urlRouterProvider.otherwise("/");
+    });
 })();
